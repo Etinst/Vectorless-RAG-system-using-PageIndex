@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+\title{Improvements Made in the Vectorless RAG System using PageIndex}
+\author{Darshan Nitin Barhate}
+\date{July 2026}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+This project is about a Vectorless Retrieval-Augmented Generation system, also called Vectorless RAG. In normal RAG, documents are usually converted into embeddings and stored inside a vector database. In this project, PageIndex is used instead. PageIndex creates a tree structure of the document, and the language model searches that tree to find the best sections for answering a question.
+
+I improved the project in a simple and understandable way, so it looks like a student improved the original work by making it cleaner, safer, and easier to use.
+
+\section{Main Improvements}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Better notebook structure:} I divided the notebook into clear sections like setup, upload, tree building, retrieval, answer generation, and testing.
+    \item \textbf{Safer API key handling:} I removed the hardcoded API key style and changed the project to use a \texttt{.env} file. This is safer for GitHub because secret keys should not be uploaded.
+    \item \textbf{Missing file checks:} I added checks that stop the notebook early if the PDF file is missing. This makes errors easier to understand.
+    \item \textbf{Reusable helper functions:} I added functions for printing the tree, counting nodes, compressing the tree, parsing JSON safely, and running test questions.
+    \item \textbf{Cleaner routing rules:} The old notebook had finance-style routing examples. I changed this into general course and document routing rules, which better match the project.
+    \item \textbf{Simple evaluation:} I added a small test section where multiple questions can be asked. This helps show whether the retrieval step is selecting useful document sections.
+    \item \textbf{Cleaner GitHub files:} I added a new README file, requirements file, example environment file, and this LaTeX report.
+\end{enumerate}
+
+\section{What I Made in the Project}
+The improved project contains the following files:
+\begin{itemize}[leftmargin=*]
+    \item \texttt{Vectorless\_RAG\_PageIndex\_Student\_Improved.ipynb}: the improved notebook.
+    \item \texttt{README.md}: explanation for GitHub users.
+    \item \texttt{requirements.txt}: list of Python packages needed to run the project.
+    \item \texttt{.env.example}: sample file showing which API keys and settings are needed.
+    \item \texttt{Darshan\_Barhate\_Improvement\_Report.tex}: this LaTeX report.
+\end{itemize}
+
+\section{How the Improved System Works}
+The system works in four main steps:
+\begin{enumerate}[leftmargin=*]
+    \item A PDF file is uploaded to PageIndex.
+    \item PageIndex creates a tree structure from the document.
+    \item The language model reads the tree and selects the most relevant node IDs.
+    \item The selected sections are used as context to generate the final answer.
+\end{enumerate}
+
+This is called vectorless because the project does not depend on a vector database for retrieval. The retrieval is based on the document tree and the reasoning ability of the language model.
+
+\section{Why These Improvements Help}
+These improvements make the project easier for beginners to understand. A high school graduate can follow the notebook step by step because the notebook now explains what each part does. The project is also better for GitHub because it does not expose API keys and includes setup instructions.
+
+The evaluation section also makes the project stronger because it shows that the system can be tested with different questions, instead of only one example.
+
+\section{Conclusion}
+In this improved version, I kept the original idea of vectorless RAG using PageIndex, but made the project more organized and practical. The main focus was not to make the project overly complicated, but to improve readability, safety, and usability in a student-friendly way.
+
+\end{document}
